@@ -10,10 +10,8 @@ import VerIDCore
 
 extension EulerAngle {
     
-    init(_ angle: Verid_EulerAngle) {
-        self.yaw = CGFloat(angle.yaw)
-        self.pitch = CGFloat(angle.pitch)
-        self.roll = CGFloat(angle.roll)
+    convenience init(_ angle: Verid_EulerAngle) {
+        self.init(yaw: CGFloat(angle.yaw), pitch: CGFloat(angle.pitch), roll: CGFloat(angle.roll))
     }
 }
 

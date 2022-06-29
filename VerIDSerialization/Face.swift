@@ -10,7 +10,8 @@ import VerIDCore
 
 extension Face {
     
-    init(_ face: Verid_Face) {
+    convenience init(_ face: Verid_Face) {
+        self.init()
         self.data = face.serialized
         self.bounds = CGRect(face.bounds)
         self.angle = EulerAngle(face.angle)
@@ -21,14 +22,15 @@ extension Face {
     }
 }
 
-public extension Face: Serializable {
+extension Face: Serializable {
     
-    init(serialized: Data) throws {
-        self.init(try Verid_Face(serializedData: serialized))
-    }
-    
-    func serialized() throws -> Data {
-        Verid_Face(self).serializedData()
+    public func serialized() throws -> Data {
+        switch self {
+        case is RecognizableFace:
+            return try Verid_RecognizableFace(self as! RecognizableFace).serializedData()
+        default:
+            return try Verid_Face(self).serializedData()
+        }
     }
 }
 

@@ -36,8 +36,8 @@ struct Verid_SystemInfo {
 
   var veridVersion: String = String()
 
-  var veridSettings: Verid_VerIDSettings {
-    get {return _veridSettings ?? Verid_VerIDSettings()}
+  var veridSettings: Verid_VeridSettings {
+    get {return _veridSettings ?? Verid_VeridSettings()}
     set {_veridSettings = newValue}
   }
   /// Returns true if `veridSettings` has been explicitly set.
@@ -56,7 +56,7 @@ struct Verid_SystemInfo {
   init() {}
 
   fileprivate var _deviceInfo: Verid_DeviceInfo? = nil
-  fileprivate var _veridSettings: Verid_VerIDSettings? = nil
+  fileprivate var _veridSettings: Verid_VeridSettings? = nil
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)

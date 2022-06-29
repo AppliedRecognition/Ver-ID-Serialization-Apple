@@ -6,12 +6,12 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension CGPoint {
     
     init(_ point: Verid_Point) {
-        self.x = CGFloat(point.x)
-        self.y = CGFloat(point.y)
+        self.init(x: CGFloat(point.x), y: CGFloat(point.y))
     }
 }
 

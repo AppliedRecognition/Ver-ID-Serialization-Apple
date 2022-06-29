@@ -10,7 +10,7 @@ import VerIDCore
 
 extension Image {
     
-    init(_ image: Verid_Image) throws {
+    convenience init(_ image: Verid_Image) throws {
         guard let orientation = CGImagePropertyOrientation(rawValue: UInt32(image.orientation)) else {
             throw ImageUtilError.invalidOrientation
         }
@@ -19,14 +19,9 @@ extension Image {
     
 }
 
-public extension Image: Serializable {
+extension Image: Serializable {
     
-    init(serialized: Data) throws {
-        let image = try Verid_Image(serializedData: serialized)
-        self.init(image)
-    }
-    
-    func serialized() throws {
+    public func serialized() throws -> Data {
         try Verid_Image(self).serializedData()
     }
 }
@@ -48,19 +43,19 @@ extension VerIDImageFormat {
     init(_ imageFormat: Verid_Image.ImageFormat) throws {
         switch imageFormat {
         case .grayscale:
-            return VerIDImageFormatGrayscale
+            self = VerIDImageFormatGrayscale
         case .rgb:
-            return VerIDImageFormatRGB
+            self = VerIDImageFormatRGB
         case .bgr:
-            return VerIDImageFormatBGR
+            self = VerIDImageFormatBGR
         case .argb:
-            return VerIDImageFormatARGB
+            self = VerIDImageFormatARGB
         case .abgr:
-            return VerIDImageFormatABGR
+            self = VerIDImageFormatABGR
         case .rgba:
-            return VerIDImageFormatRGBA
+            self = VerIDImageFormatRGBA
         case .bgra:
-            return VerIDImageFormatBGRA
+            self = VerIDImageFormatBGRA
         default:
             throw ImageUtilError.unsupportedPixelFormat
         }
@@ -72,19 +67,19 @@ extension Verid_Image.ImageFormat {
     init(_ imageFormat: VerIDImageFormat) throws {
         switch imageFormat {
         case VerIDImageFormatGrayscale:
-            return .grayscale
+            self = .grayscale
         case VerIDImageFormatRGB:
-            return .rgb
+            self = .rgb
         case VerIDImageFormatBGR:
-            return .bgr
+            self = .bgr
         case VerIDImageFormatARGB:
-            return .argb
+            self = .argb
         case VerIDImageFormatABGR:
-            return .abgr
+            self = .abgr
         case VerIDImageFormatRGBA:
-            return .rgba
+            self = .rgba
         case VerIDImageFormatBGRA:
-            return .bgra
+            self = .bgra
         default:
             throw ImageUtilError.unsupportedPixelFormat
         }

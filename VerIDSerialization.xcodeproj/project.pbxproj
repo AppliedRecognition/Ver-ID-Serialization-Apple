@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		074FBDE9AA00340F12947927 /* Pods_VerIDSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C652CCDA65E86D10753BB7C /* Pods_VerIDSerialization.framework */; };
+		11767AAD61ABD399D5D5D597 /* Pods_Serialization_VerIDSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C0CEA56DEC54B4CCBD9D0F4 /* Pods_Serialization_VerIDSerialization.framework */; };
+		3B347228286C491D00969D79 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B347227286C491D00969D79 /* Registration.swift */; };
+		3B34722A286C4B2A00969D79 /* registration.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B347229286C4B2A00969D79 /* registration.pb.swift */; };
+		3B34722C286C64FA00969D79 /* SerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34722B286C64FA00969D79 /* SerializationError.swift */; };
+		3B34723C286CDA6600969D79 /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B34723B286CDA6600969D79 /* Deserializer.swift */; };
 		3B92490428649DD700237CF0 /* VerIDSerialization.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3B92490328649DD700237CF0 /* VerIDSerialization.docc */; };
 		3B92490A28649DD700237CF0 /* VerIDSerialization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9248FF28649DD700237CF0 /* VerIDSerialization.framework */; };
 		3B92490F28649DD700237CF0 /* VerIDSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B92490E28649DD700237CF0 /* VerIDSerializationTests.swift */; };
@@ -34,8 +38,7 @@
 		3B9249412864A39400237CF0 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9249402864A39400237CF0 /* Capture.swift */; };
 		3B9249432864A3B700237CF0 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9249422864A3B700237CF0 /* SystemInfo.swift */; };
 		3B9249452864A5CA00237CF0 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9249442864A5CA00237CF0 /* Serializable.swift */; };
-		3B9249482864ACA300237CF0 /* Ver-ID-Serialization.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3B9249472864ACA300237CF0 /* Ver-ID-Serialization.podspec */; };
-		50AB9E2E8B969A77A3EDC58C /* Pods_VerIDSerialization_VerIDSerializationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2387660E37D68BD5F712679 /* Pods_VerIDSerialization_VerIDSerializationTests.framework */; };
+		69FD9C64FC498F98D24BE8A1 /* Pods_Serialization_VerIDSerializationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8800DF9E42939AD3B387 /* Pods_Serialization_VerIDSerializationTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		292B9947B118393A6A636BE9 /* Pods-VerIDSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerIDSerialization.release.xcconfig"; path = "Target Support Files/Pods-VerIDSerialization/Pods-VerIDSerialization.release.xcconfig"; sourceTree = "<group>"; };
-		2A6F59B8CC088716B237AFA8 /* Pods-VerIDSerialization-VerIDSerializationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerIDSerialization-VerIDSerializationTests.release.xcconfig"; path = "Target Support Files/Pods-VerIDSerialization-VerIDSerializationTests/Pods-VerIDSerialization-VerIDSerializationTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A1CD2841025B34AEAB021F0 /* Pods-Serialization-VerIDSerializationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerializationTests.debug.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		310C8800DF9E42939AD3B387 /* Pods_Serialization_VerIDSerializationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Serialization_VerIDSerializationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B347227286C491D00969D79 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		3B347229286C4B2A00969D79 /* registration.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registration.pb.swift; sourceTree = "<group>"; };
+		3B34722B286C64FA00969D79 /* SerializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationError.swift; sourceTree = "<group>"; };
+		3B34723B286CDA6600969D79 /* Deserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
 		3B9248FF28649DD700237CF0 /* VerIDSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VerIDSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B92490228649DD700237CF0 /* VerIDSerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerIDSerialization.h; sourceTree = "<group>"; };
 		3B92490328649DD700237CF0 /* VerIDSerialization.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = VerIDSerialization.docc; sourceTree = "<group>"; };
@@ -78,11 +85,11 @@
 		3B9249402864A39400237CF0 /* Capture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capture.swift; sourceTree = "<group>"; };
 		3B9249422864A3B700237CF0 /* SystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 		3B9249442864A5CA00237CF0 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
-		3B9249472864ACA300237CF0 /* Ver-ID-Serialization.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ver-ID-Serialization.podspec"; sourceTree = SOURCE_ROOT; };
-		3C652CCDA65E86D10753BB7C /* Pods_VerIDSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VerIDSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86D631F9DA12CD4E383E9A4C /* Pods-VerIDSerialization-VerIDSerializationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerIDSerialization-VerIDSerializationTests.debug.xcconfig"; path = "Target Support Files/Pods-VerIDSerialization-VerIDSerializationTests/Pods-VerIDSerialization-VerIDSerializationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A2387660E37D68BD5F712679 /* Pods_VerIDSerialization_VerIDSerializationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VerIDSerialization_VerIDSerializationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB9561B36E95DC3542ED938C /* Pods-VerIDSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerIDSerialization.debug.xcconfig"; path = "Target Support Files/Pods-VerIDSerialization/Pods-VerIDSerialization.debug.xcconfig"; sourceTree = "<group>"; };
+		3B9249472864ACA300237CF0 /* Ver-ID-Serialization.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Ver-ID-Serialization.podspec"; sourceTree = SOURCE_ROOT; };
+		41BE9CD55B82537140673A17 /* Pods-Serialization-VerIDSerializationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerializationTests.release.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests.release.xcconfig"; sourceTree = "<group>"; };
+		5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerialization.debug.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerialization/Pods-Serialization-VerIDSerialization.debug.xcconfig"; sourceTree = "<group>"; };
+		87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerialization.release.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerialization/Pods-Serialization-VerIDSerialization.release.xcconfig"; sourceTree = "<group>"; };
+		9C0CEA56DEC54B4CCBD9D0F4 /* Pods_Serialization_VerIDSerialization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Serialization_VerIDSerialization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074FBDE9AA00340F12947927 /* Pods_VerIDSerialization.framework in Frameworks */,
+				11767AAD61ABD399D5D5D597 /* Pods_Serialization_VerIDSerialization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B92490A28649DD700237CF0 /* VerIDSerialization.framework in Frameworks */,
-				50AB9E2E8B969A77A3EDC58C /* Pods_VerIDSerialization_VerIDSerializationTests.framework in Frameworks */,
+				69FD9C64FC498F98D24BE8A1 /* Pods_Serialization_VerIDSerializationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +150,9 @@
 				3B9249402864A39400237CF0 /* Capture.swift */,
 				3B9249422864A3B700237CF0 /* SystemInfo.swift */,
 				3B9249442864A5CA00237CF0 /* Serializable.swift */,
+				3B347227286C491D00969D79 /* Registration.swift */,
+				3B34722B286C64FA00969D79 /* SerializationError.swift */,
+				3B34723B286CDA6600969D79 /* Deserializer.swift */,
 			);
 			path = VerIDSerialization;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 		3B9249192864A0AE00237CF0 /* Protobufs */ = {
 			isa = PBXGroup;
 			children = (
+				3B347229286C4B2A00969D79 /* registration.pb.swift */,
 				3B92491A2864A0AE00237CF0 /* system_info.pb.swift */,
 				3B92491B2864A0AE00237CF0 /* recognizable_face.pb.swift */,
 				3B92491C2864A0AE00237CF0 /* rect.pb.swift */,
@@ -177,8 +188,8 @@
 		C2F259AA6517DF47403927ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C652CCDA65E86D10753BB7C /* Pods_VerIDSerialization.framework */,
-				A2387660E37D68BD5F712679 /* Pods_VerIDSerialization_VerIDSerializationTests.framework */,
+				9C0CEA56DEC54B4CCBD9D0F4 /* Pods_Serialization_VerIDSerialization.framework */,
+				310C8800DF9E42939AD3B387 /* Pods_Serialization_VerIDSerializationTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,10 +197,10 @@
 		CF9D0EFAF5FCDA072DA0229A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EB9561B36E95DC3542ED938C /* Pods-VerIDSerialization.debug.xcconfig */,
-				292B9947B118393A6A636BE9 /* Pods-VerIDSerialization.release.xcconfig */,
-				86D631F9DA12CD4E383E9A4C /* Pods-VerIDSerialization-VerIDSerializationTests.debug.xcconfig */,
-				2A6F59B8CC088716B237AFA8 /* Pods-VerIDSerialization-VerIDSerializationTests.release.xcconfig */,
+				5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */,
+				87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */,
+				1A1CD2841025B34AEAB021F0 /* Pods-Serialization-VerIDSerializationTests.debug.xcconfig */,
+				41BE9CD55B82537140673A17 /* Pods-Serialization-VerIDSerializationTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -289,7 +300,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9249482864ACA300237CF0 /* Ver-ID-Serialization.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,15 +319,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VerIDSerialization-VerIDSerializationTests/Pods-VerIDSerialization-VerIDSerializationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VerIDSerialization-VerIDSerializationTests/Pods-VerIDSerialization-VerIDSerializationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VerIDSerialization-VerIDSerializationTests/Pods-VerIDSerialization-VerIDSerializationTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6C543AEB0B4FCF988C1B2197 /* [CP] Check Pods Manifest.lock */ = {
@@ -335,7 +345,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VerIDSerialization-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Serialization-VerIDSerialization-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -357,7 +367,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VerIDSerialization-VerIDSerializationTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Serialization-VerIDSerializationTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,6 +384,7 @@
 				3B9249372864A15700237CF0 /* Size.swift in Sources */,
 				3B9249332864A0D400237CF0 /* Face.swift in Sources */,
 				3B9249312864A0AF00237CF0 /* verid_settings.pb.swift in Sources */,
+				3B34722C286C64FA00969D79 /* SerializationError.swift in Sources */,
 				3B92492E2864A0AF00237CF0 /* image.pb.swift in Sources */,
 				3B92490428649DD700237CF0 /* VerIDSerialization.docc in Sources */,
 				3B92493B2864A1A000237CF0 /* EulerAngle.swift in Sources */,
@@ -383,10 +394,13 @@
 				3B92493F2864A20E00237CF0 /* Image.swift in Sources */,
 				3B9249432864A3B700237CF0 /* SystemInfo.swift in Sources */,
 				3B92492C2864A0AE00237CF0 /* face_template.pb.swift in Sources */,
+				3B34722A286C4B2A00969D79 /* registration.pb.swift in Sources */,
 				3B9249282864A0AE00237CF0 /* rect.pb.swift in Sources */,
 				3B9249262864A0AE00237CF0 /* system_info.pb.swift in Sources */,
+				3B34723C286CDA6600969D79 /* Deserializer.swift in Sources */,
 				3B92492D2864A0AF00237CF0 /* device_info.pb.swift in Sources */,
 				3B9249352864A12F00237CF0 /* Point.swift in Sources */,
+				3B347228286C491D00969D79 /* Registration.swift in Sources */,
 				3B92492F2864A0AF00237CF0 /* size.pb.swift in Sources */,
 				3B9249292864A0AE00237CF0 /* euler_angle.pb.swift in Sources */,
 				3B92493D2864A1CC00237CF0 /* RecognizableFace.swift in Sources */,
@@ -419,6 +433,7 @@
 		3B92491128649DD700237CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -467,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -482,6 +497,7 @@
 		3B92491228649DD700237CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -524,7 +540,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -538,7 +554,7 @@
 		};
 		3B92491428649DD700237CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB9561B36E95DC3542ED938C /* Pods-VerIDSerialization.debug.xcconfig */;
+			baseConfigurationReference = 5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -567,7 +583,7 @@
 		};
 		3B92491528649DD700237CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 292B9947B118393A6A636BE9 /* Pods-VerIDSerialization.release.xcconfig */;
+			baseConfigurationReference = 87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -596,9 +612,8 @@
 		};
 		3B92491728649DD700237CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86D631F9DA12CD4E383E9A4C /* Pods-VerIDSerialization-VerIDSerializationTests.debug.xcconfig */;
+			baseConfigurationReference = 1A1CD2841025B34AEAB021F0 /* Pods-Serialization-VerIDSerializationTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
@@ -614,9 +629,8 @@
 		};
 		3B92491828649DD700237CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A6F59B8CC088716B237AFA8 /* Pods-VerIDSerialization-VerIDSerializationTests.release.xcconfig */;
+			baseConfigurationReference = 41BE9CD55B82537140673A17 /* Pods-Serialization-VerIDSerializationTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;

@@ -10,19 +10,8 @@ import VerIDCore
 
 extension RecognizableFace {
     
-    init(_ face: Verid_RecognizableFace) {
+    convenience init(_ face: Verid_RecognizableFace) {
         self.init(face: Face(face.face), recognitionData: face.template.data, version: face.template.version)
-    }
-}
-
-public extension RecognizableFace: Serializable {
-    
-    init(serialized: Data) throws {
-        self.init(try Verid_RecognizableFace(serializedData: serialized))
-    }
-    
-    func serialized() throws -> Data {
-        try Verid_RecognizableFace(self).serializedData()
     }
 }
 

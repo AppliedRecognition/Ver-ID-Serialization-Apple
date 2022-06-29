@@ -10,29 +10,22 @@ import VerIDCore
 
 extension SystemInfo {
     
-    init(_ systemInfo: Verid_SystemInfo) {
-        self.deviceInfo = DeviceInfo(systemInfo.deviceInfo)
-        self.veridVersion = systemInfo.veridVersion
-        self.veridSettings = DetRecLibSettings(systemInfo.veridSettings)
-        self.faceDetectionClassName = systemInfo.faceDetectionClassName
-        self.faceRecognitionClassName = systemInfo.faceRecognitionClassName
-        self.userManagementClassName = systemInfo.userManagementClassName
+    convenience init(_ systemInfo: Verid_SystemInfo) {
+        self.init(deviceInfo: DeviceInfo(systemInfo.deviceInfo), veridVersion: systemInfo.veridVersion, veridSettings: DetRecLibSettings(systemInfo.veridSettings), faceDetectionClassName: systemInfo.faceDetectionClassName, faceRecognitionClassName: systemInfo.faceRecognitionClassName, userManagementClassName: systemInfo.userManagementClassName, defaultFaceTemplateVersion: "unknown")
     }
 }
 
 extension DeviceInfo {
     
-    init(_ deviceInfo: Verid_DeviceInfo) {
-        self.make = deviceInfo.make
-        self.model = deviceInfo.model
-        self.os = deviceInfo.os
-        self.osVersion = deviceInfo.osVersion
+    convenience init(_ deviceInfo: Verid_DeviceInfo) {
+        self.init(make: deviceInfo.make, model: deviceInfo.model, os: deviceInfo.os, osVersion: deviceInfo.osVersion)
     }
 }
 
 extension DetRecLibSettings {
     
-    init(_ verIDSettings: Verid_VerIDSettings) {
+    convenience init(_ verIDSettings: Verid_VeridSettings) {
+        self.init()
         self.confidenceThreshold = verIDSettings.confidenceThreshold
         self.sizeRange = verIDSettings.sizeRange
         self.rollRangeLarge = verIDSettings.rollRangeLarge
@@ -62,7 +55,7 @@ extension Verid_SystemInfo {
     init(_ systemInfo: SystemInfo) {
         self.deviceInfo = Verid_DeviceInfo(systemInfo.deviceInfo)
         self.veridVersion = systemInfo.veridVersion
-        self.veridSettings = Verid_VerIDSettings(systemInfo.veridSettings)
+        self.veridSettings = Verid_VeridSettings(systemInfo.veridSettings)
         self.faceDetectionClassName = systemInfo.faceDetectionClassName
         self.faceRecognitionClassName = systemInfo.faceRecognitionClassName
         self.userManagementClassName = systemInfo.userManagementClassName
@@ -79,7 +72,7 @@ extension Verid_DeviceInfo {
     }
 }
 
-extension Verid_VerIDSettings {
+extension Verid_VeridSettings {
     
     init(_ verIDSettings: DetRecLibSettings) {
         self.confidenceThreshold = verIDSettings.confidenceThreshold

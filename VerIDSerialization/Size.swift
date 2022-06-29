@@ -6,12 +6,12 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension CGSize {
     
     init(_ size: Verid_Size) {
-        self.width = CGFloat(size.width)
-        self.height = CGFloat(size.height)
+        self.init(width: CGFloat(size.width), height: CGFloat(size.height))
     }
 }
 

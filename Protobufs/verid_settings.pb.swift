@@ -20,7 +20,7 @@ fileprivate struct _GeneratedWithProtocGenSwiftVersion: SwiftProtobuf.ProtobufAP
   typealias Version = _2
 }
 
-struct Verid_VerIDSettings {
+struct Verid_VeridSettings {
   // SwiftProtobuf.Message conformance is added in an extension below. See the
   // `Message` and `Message+*Additions` files in the SwiftProtobuf library for
   // methods supported on all messages.
@@ -138,15 +138,15 @@ struct Verid_VerIDSettings {
 }
 
 #if swift(>=5.5) && canImport(_Concurrency)
-extension Verid_VerIDSettings: @unchecked Sendable {}
+extension Verid_VeridSettings: @unchecked Sendable {}
 #endif  // swift(>=5.5) && canImport(_Concurrency)
 
 // MARK: - Code below here is support for the SwiftProtobuf runtime.
 
 fileprivate let _protobuf_package = "verid"
 
-extension Verid_VerIDSettings: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
-  static let protoMessageName: String = _protobuf_package + ".VerIDSettings"
+extension Verid_VeridSettings: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
+  static let protoMessageName: String = _protobuf_package + ".VeridSettings"
   static let _protobuf_nameMap: SwiftProtobuf._NameMap = [
     1: .standard(proto: "confidence_threshold"),
     2: .standard(proto: "size_range"),
@@ -334,7 +334,7 @@ extension Verid_VerIDSettings: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
     try unknownFields.traverse(visitor: &visitor)
   }
 
-  static func ==(lhs: Verid_VerIDSettings, rhs: Verid_VerIDSettings) -> Bool {
+  static func ==(lhs: Verid_VeridSettings, rhs: Verid_VeridSettings) -> Bool {
     if lhs._storage !== rhs._storage {
       let storagesAreEqual: Bool = withExtendedLifetime((lhs._storage, rhs._storage)) { (_args: (_StorageClass, _StorageClass)) in
         let _storage = _args.0

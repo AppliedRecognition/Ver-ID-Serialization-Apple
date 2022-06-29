@@ -8,8 +8,6 @@
 import Foundation
 
 public protocol Serializable {
-    
-    init(serialized: Data) throws
-    
+
     func serialized() throws -> Data
 }

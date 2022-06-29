@@ -8,6 +8,7 @@
 import Foundation
 import VerIDCore
 import UIKit
+import SwiftProtobuf
 
 public struct Capture: Serializable {
     
@@ -17,7 +18,10 @@ public struct Capture: Serializable {
     public let uiImage: UIImage
     public let systemInfo: SystemInfo
     
-    public init(date: Date, image: Image, faces: [RecognizableFace], uiImage: UIImage, systemInfo: SystemInfo) {
+    public init(date: Date, image: Image, faces: [RecognizableFace], uiImage: UIImage, systemInfo: SystemInfo) throws {
+        guard !faces.isEmpty else {
+            throw SerializationError.expectedAtLeastOneFace
+        }
         self.date = date
         self.image = image
         self.faces = faces
@@ -25,27 +29,20 @@ public struct Capture: Serializable {
         self.systemInfo = systemInfo
     }
     
-    public init(serialized: Data) throws {
-        let capture = try Verid_Capture(serializedData: serialized)
-        try self.init(capture)
-    }
-    
     public func serialized() throws -> Data {
-        guard let capture = Verid_Capture(self) else {
-            throw NSError()
-        }
-        return capture.serializedData()
+        let capture = try Verid_Capture(self)
+        return try capture.serializedData()
     }
 }
 
 extension Capture {
     
     init(_ capture: Verid_Capture) throws {
-        self.image = Image(capture.veridImage)
-        self.date = Date(timeIntervalSince1970: capture.date / 1000)
+        self.image = try Image(capture.veridImage)
+        self.date = capture.date.date
         self.faces = capture.faces.map({ RecognizableFace($0) })
         guard let uiImage = UIImage(data: capture.image) else {
-            throw NSError()
+            throw SerializationError.imageDeserializationFailed
         }
         self.uiImage = uiImage
         self.systemInfo = SystemInfo(capture.systemInfo)
@@ -54,12 +51,12 @@ extension Capture {
 
 extension Verid_Capture {
     
-    init?(_ capture: Capture) {
+    init(_ capture: Capture) throws {
         guard let png = capture.uiImage.pngData() else {
-            return nil
+            throw SerializationError.imageSerializationFailed
         }
         guard let face = capture.faces.first else {
-            return nil
+            throw SerializationError.expectedAtLeastOneFace
         }
         UIGraphicsBeginImageContext(face.bounds.size)
         defer {
@@ -67,19 +64,17 @@ extension Verid_Capture {
         }
         capture.uiImage.draw(at: CGPoint(x: 0-face.bounds.minX, y: 0-face.bounds.minY))
         guard let faceImage = UIGraphicsGetImageFromCurrentImageContext() else {
-            return nil
+            throw SerializationError.imageCroppingFailed
         }
         guard let facePng = faceImage.pngData() else {
-            return nil
+            throw SerializationError.imageSerializationFailed
         }
-        guard let veridImage = try? Verid_Image(capture.image) else {
-            return nil
-        }
+        let veridImage = try Verid_Image(capture.image)
         self.faces = capture.faces.map { Verid_RecognizableFace($0) }
         self.veridImage = veridImage
         self.image = png
         self.faceImage = facePng
-        self.date = capture.date.timeIntervalSince1970 / 1000
+        self.date = Google_Protobuf_Timestamp.init(date: capture.date)
         self.systemInfo = Verid_SystemInfo(capture.systemInfo)
     }
 }
