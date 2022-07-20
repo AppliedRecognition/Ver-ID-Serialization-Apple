@@ -86,6 +86,8 @@
 		3B9249422864A3B700237CF0 /* SystemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemInfo.swift; sourceTree = "<group>"; };
 		3B9249442864A5CA00237CF0 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		3B9249472864ACA300237CF0 /* Ver-ID-Serialization.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Ver-ID-Serialization.podspec"; sourceTree = SOURCE_ROOT; };
+		3B96B4B72888504400709F4B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		3B96B4B8288850C700709F4B /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = SOURCE_ROOT; };
 		41BE9CD55B82537140673A17 /* Pods-Serialization-VerIDSerializationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerializationTests.release.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests.release.xcconfig"; sourceTree = "<group>"; };
 		5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerialization.debug.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerialization/Pods-Serialization-VerIDSerialization.debug.xcconfig"; sourceTree = "<group>"; };
 		87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerialization.release.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerialization/Pods-Serialization-VerIDSerialization.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,8 @@
 		3B92490128649DD700237CF0 /* VerIDSerialization */ = {
 			isa = PBXGroup;
 			children = (
+				3B96B4B8288850C700709F4B /* build.sh */,
+				3B96B4B72888504400709F4B /* README.md */,
 				3B9249472864ACA300237CF0 /* Ver-ID-Serialization.podspec */,
 				3B92490228649DD700237CF0 /* VerIDSerialization.h */,
 				3B92490328649DD700237CF0 /* VerIDSerialization.docc */,
@@ -483,6 +487,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -541,6 +546,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -557,7 +563,7 @@
 			baseConfigurationReference = 5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1000000;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -571,7 +577,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerialization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -586,7 +592,7 @@
 			baseConfigurationReference = 87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1000000;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -600,7 +606,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerialization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -618,7 +624,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerializationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -635,7 +641,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerializationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
