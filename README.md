@@ -39,3 +39,7 @@ The framework adds conformance to the [Serializable](./VerIDSerialization/Serial
 - Capture*
 
 **Capture type is introduced in the VerIDSerialization framework. It facilitates sharing of captured images and faces.*
+
+## Documentation
+
+Reference documentation is available on the project's [Github page](https://appliedrecognition.github.io/Ver-ID-Serialization-Apple/).
