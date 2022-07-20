@@ -5,7 +5,7 @@ abstract_target 'Serialization' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Ver-ID/Core', :git => 'https://github.com/AppliedRecognition/Ver-ID-UI-iOS.git', :commit => 'eaed7559b5bf468d9af529357d52a3d3a87ebd45'
+  pod 'Ver-ID/Core', '~> 2.6'
   pod 'SwiftProtobuf', '~> 1.19'
   
   target 'VerIDSerialization' do
