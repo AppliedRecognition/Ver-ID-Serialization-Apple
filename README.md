@@ -24,7 +24,7 @@ let face: Face // Face detected by Ver-ID
 let serialized: Data = try face.serialized()
 
 // Deserialize an instance of Face
-let deserialized: Face = try Face(serialized: serialized)
+let deserialized: Face = try Deserializer.deserialize(serialized)
 ```
 
 ## Types
@@ -34,6 +34,8 @@ The framework adds conformance to the [Serializable](./VerIDSerialization/Serial
 - Image
 - Face
 - RecognizableFace
+- SystemInfo
+- Registration
 - Capture*
 
 **Capture type is introduced in the VerIDSerialization framework. It facilitates sharing of captured images and faces.*
