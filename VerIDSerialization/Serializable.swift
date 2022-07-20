@@ -7,7 +7,12 @@
 
 import Foundation
 
+/// Serializable protocol
+/// - Since: 1.0.0
 public protocol Serializable {
-
+    
+    /// Serialize
+    /// - Returns: Serialized object
+    /// - Since: 1.0.0
     func serialized() throws -> Data
 }

@@ -15,6 +15,13 @@ extension SystemInfo {
     }
 }
 
+extension SystemInfo: Serializable {
+    
+    public func serialized() throws -> Data {
+        try Verid_SystemInfo(self).serializedData()
+    }
+}
+
 extension DeviceInfo {
     
     convenience init(_ deviceInfo: Verid_DeviceInfo) {

@@ -10,14 +10,34 @@ import VerIDCore
 import UIKit
 import SwiftProtobuf
 
+/// Face capture with images and system info
+/// - Since: 1.0.0
 public struct Capture: Serializable {
     
+    /// Date of the capture
+    /// - Since: 1.0.0
     public let date: Date
+    /// Raw captured image
+    /// - Since: 1.0.0
     public let image: Image
+    /// Faces captured in the image
+    /// - Since: 1.0.0
     public let faces: [RecognizableFace]
+    /// `UIImage` version of the captured image
+    /// - Since: 1.0.0
     public let uiImage: UIImage
+    /// Info about the system on which the image was captured
+    /// - Since: 1.0.0
     public let systemInfo: SystemInfo
     
+    /// Public initializer
+    /// - Parameters:
+    ///   - date: Date of the capture
+    ///   - image: Raw captured image
+    ///   - faces: Faces captured in the image
+    ///   - uiImage: `UIImage` version of the captured image
+    ///   - systemInfo: Info about the system on which the image was captured
+    /// - Since: 1.0.0
     public init(date: Date, image: Image, faces: [RecognizableFace], uiImage: UIImage, systemInfo: SystemInfo) throws {
         guard !faces.isEmpty else {
             throw SerializationError.expectedAtLeastOneFace
@@ -29,6 +49,8 @@ public struct Capture: Serializable {
         self.systemInfo = systemInfo
     }
     
+    /// - Returns: Serialized capture
+    /// - Since: 1.0.0
     public func serialized() throws -> Data {
         let capture = try Verid_Capture(self)
         return try capture.serializedData()

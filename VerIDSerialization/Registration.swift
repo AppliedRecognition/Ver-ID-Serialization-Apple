@@ -9,12 +9,26 @@ import Foundation
 import VerIDCore
 import UIKit
 
+/// Face registration
+/// - Since: 1.0.0
 public struct Registration: Serializable {
     
+    /// Registered faces
+    /// - Since: 1.0.0
     public let faces: [Recognizable]
+    /// Image of the registered user's face
+    /// - Since: 1.0.0
     public let image: UIImage
+    /// Info about the system on which the user was registered
+    /// - Since:1.0.0
     public let systemInfo: SystemInfo
     
+    /// Public initializer
+    /// - Parameters:
+    ///   - faces: Registered faces
+    ///   - image: Image of the registered user's face
+    ///   - systemInfo: Info about the system on which the user was registered
+    /// - Since: 1.0.0
     public init(faces: [Recognizable], image: UIImage, systemInfo: SystemInfo) throws {
         guard !faces.isEmpty else {
             throw SerializationError.expectedAtLeastOneFace
@@ -24,6 +38,7 @@ public struct Registration: Serializable {
         self.systemInfo = systemInfo
     }
     
+    /// - Returns: Serialized face registration
     public func serialized() throws -> Data {
         let registration = try Verid_Registration(self)
         return try registration.serializedData()
