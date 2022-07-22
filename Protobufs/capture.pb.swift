@@ -67,6 +67,15 @@ struct Verid_Capture {
   /// Clears the value of `systemInfo`. Subsequent reads from it will return its default value.
   mutating func clearSystemInfo() {_uniqueStorage()._systemInfo = nil}
 
+  var imageMetadata: Verid_ImageMetadata {
+    get {return _storage._imageMetadata ?? Verid_ImageMetadata()}
+    set {_uniqueStorage()._imageMetadata = newValue}
+  }
+  /// Returns true if `imageMetadata` has been explicitly set.
+  var hasImageMetadata: Bool {return _storage._imageMetadata != nil}
+  /// Clears the value of `imageMetadata`. Subsequent reads from it will return its default value.
+  mutating func clearImageMetadata() {_uniqueStorage()._imageMetadata = nil}
+
   var unknownFields = SwiftProtobuf.UnknownStorage()
 
   init() {}
@@ -91,6 +100,7 @@ extension Verid_Capture: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     4: .same(proto: "image"),
     5: .standard(proto: "face_image"),
     6: .standard(proto: "system_info"),
+    7: .standard(proto: "image_metadata"),
   ]
 
   fileprivate class _StorageClass {
@@ -100,6 +110,7 @@ extension Verid_Capture: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
     var _image: Data = Data()
     var _faceImage: Data = Data()
     var _systemInfo: Verid_SystemInfo? = nil
+    var _imageMetadata: Verid_ImageMetadata? = nil
 
     static let defaultInstance = _StorageClass()
 
@@ -112,6 +123,7 @@ extension Verid_Capture: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
       _image = source._image
       _faceImage = source._faceImage
       _systemInfo = source._systemInfo
+      _imageMetadata = source._imageMetadata
     }
   }
 
@@ -136,6 +148,7 @@ extension Verid_Capture: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
         case 4: try { try decoder.decodeSingularBytesField(value: &_storage._image) }()
         case 5: try { try decoder.decodeSingularBytesField(value: &_storage._faceImage) }()
         case 6: try { try decoder.decodeSingularMessageField(value: &_storage._systemInfo) }()
+        case 7: try { try decoder.decodeSingularMessageField(value: &_storage._imageMetadata) }()
         default: break
         }
       }
@@ -166,6 +179,9 @@ extension Verid_Capture: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
       try { if let v = _storage._systemInfo {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 6)
       } }()
+      try { if let v = _storage._imageMetadata {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 7)
+      } }()
     }
     try unknownFields.traverse(visitor: &visitor)
   }
@@ -181,6 +197,7 @@ extension Verid_Capture: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementa
         if _storage._image != rhs_storage._image {return false}
         if _storage._faceImage != rhs_storage._faceImage {return false}
         if _storage._systemInfo != rhs_storage._systemInfo {return false}
+        if _storage._imageMetadata != rhs_storage._imageMetadata {return false}
         return true
       }
       if !storagesAreEqual {return false}

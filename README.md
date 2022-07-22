@@ -9,7 +9,7 @@ The framework contains extensions that add conformance to the framework's Serial
 In your **Podfile** add:
 
 ```
-pod 'Ver-ID-Serialization', '~> 1.0'
+pod 'Ver-ID-Serialization', '~> 1.1'
 ```
 
 ## Usage example
@@ -35,10 +35,11 @@ The framework adds conformance to the [Serializable](./VerIDSerialization/Serial
 - Face
 - RecognizableFace
 - SystemInfo
-- Registration
+- Registration*
 - Capture*
+- ImageMetadata*
 
-**Capture type is introduced in the VerIDSerialization framework. It facilitates sharing of captured images and faces.*
+**Capture, Registration and ImageMetadata types are introduced in the VerIDSerialization framework. They facilitates sharing of captured images and faces.*
 
 ## Documentation
 

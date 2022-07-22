@@ -30,6 +30,8 @@ public struct Capture: Serializable {
     /// - Since: 1.0.0
     public let systemInfo: SystemInfo
     
+    public let imageMetadata: ImageMetadata?
+    
     /// Public initializer
     /// - Parameters:
     ///   - date: Date of the capture
@@ -38,7 +40,7 @@ public struct Capture: Serializable {
     ///   - uiImage: `UIImage` version of the captured image
     ///   - systemInfo: Info about the system on which the image was captured
     /// - Since: 1.0.0
-    public init(date: Date, image: Image, faces: [RecognizableFace], uiImage: UIImage, systemInfo: SystemInfo) throws {
+    public init(date: Date, image: Image, faces: [RecognizableFace], uiImage: UIImage, systemInfo: SystemInfo, imageMetadata: ImageMetadata? = nil) throws {
         guard !faces.isEmpty else {
             throw SerializationError.expectedAtLeastOneFace
         }
@@ -47,6 +49,7 @@ public struct Capture: Serializable {
         self.faces = faces
         self.uiImage = uiImage
         self.systemInfo = systemInfo
+        self.imageMetadata = imageMetadata
     }
     
     /// - Returns: Serialized capture
@@ -68,6 +71,7 @@ extension Capture {
         }
         self.uiImage = uiImage
         self.systemInfo = SystemInfo(capture.systemInfo)
+        self.imageMetadata = capture.hasImageMetadata ? ImageMetadata(capture.imageMetadata) : nil
     }
 }
 
@@ -98,5 +102,8 @@ extension Verid_Capture {
         self.faceImage = facePng
         self.date = Google_Protobuf_Timestamp.init(date: capture.date)
         self.systemInfo = Verid_SystemInfo(capture.systemInfo)
+        if let metadata = capture.imageMetadata {
+            self.imageMetadata = Verid_ImageMetadata(metadata)
+        }
     }
 }

@@ -52,6 +52,10 @@ public class Deserializer {
             let systemInfo = try Verid_SystemInfo(serializedData: serialized)
             return SystemInfo(systemInfo) as! T
         }
+        if T.self == ImageMetadata.self {
+            let imageMetadata = try Verid_ImageMetadata(serializedData: serialized)
+            return ImageMetadata(imageMetadata) as! T
+        }
         throw SerializationError.deserializationUnavailableForType
     }
 }

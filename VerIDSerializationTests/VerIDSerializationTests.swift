@@ -121,6 +121,6 @@ class VerIDSerializationTests: XCTestCase {
         guard let image = UIImage(systemName: "face.smiling") else {
             throw SerializationError.imageSerializationFailed
         }
-        return try Capture(date: Date(), image: self.generateImage(), faces: [try self.generateRecognizableFace()], uiImage: image, systemInfo: SystemInfo.init(deviceInfo: DeviceInfo(), veridVersion: "2.6.0", veridSettings: DetRecLibSettings(), faceDetectionClassName: "VerIDFaceDetection", faceRecognitionClassName: "VerIDFaceRecognition", userManagementClassName: "VerIDUserManagement", defaultFaceTemplateVersion: "V20"))
+        return try Capture(date: Date(), image: self.generateImage(), faces: [try self.generateRecognizableFace()], uiImage: image, systemInfo: SystemInfo.init(deviceInfo: DeviceInfo(), veridVersion: "2.6.0", veridSettings: DetRecLibSettings(), faceDetectionClassName: "VerIDFaceDetection", faceRecognitionClassName: "VerIDFaceRecognition", userManagementClassName: "VerIDUserManagement", defaultFaceTemplateVersion: "V20"), imageMetadata: ImageMetadata(date: Date(), deviceInfo: DeviceInfo()))
     }
 }

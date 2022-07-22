@@ -38,6 +38,8 @@
 		3B9249412864A39400237CF0 /* Capture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9249402864A39400237CF0 /* Capture.swift */; };
 		3B9249432864A3B700237CF0 /* SystemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9249422864A3B700237CF0 /* SystemInfo.swift */; };
 		3B9249452864A5CA00237CF0 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9249442864A5CA00237CF0 /* Serializable.swift */; };
+		3B96B4C92889E4DF00709F4B /* image_metadata.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B96B4C82889E4DF00709F4B /* image_metadata.pb.swift */; };
+		3B96B4CB2889E65400709F4B /* ImageMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B96B4CA2889E65400709F4B /* ImageMetadata.swift */; };
 		69FD9C64FC498F98D24BE8A1 /* Pods_Serialization_VerIDSerializationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 310C8800DF9E42939AD3B387 /* Pods_Serialization_VerIDSerializationTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,8 @@
 		3B9249472864ACA300237CF0 /* Ver-ID-Serialization.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Ver-ID-Serialization.podspec"; sourceTree = SOURCE_ROOT; };
 		3B96B4B72888504400709F4B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		3B96B4B8288850C700709F4B /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = SOURCE_ROOT; };
+		3B96B4C82889E4DF00709F4B /* image_metadata.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = image_metadata.pb.swift; sourceTree = "<group>"; };
+		3B96B4CA2889E65400709F4B /* ImageMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMetadata.swift; sourceTree = "<group>"; };
 		41BE9CD55B82537140673A17 /* Pods-Serialization-VerIDSerializationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerializationTests.release.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerializationTests/Pods-Serialization-VerIDSerializationTests.release.xcconfig"; sourceTree = "<group>"; };
 		5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerialization.debug.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerialization/Pods-Serialization-VerIDSerialization.debug.xcconfig"; sourceTree = "<group>"; };
 		87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Serialization-VerIDSerialization.release.xcconfig"; path = "Target Support Files/Pods-Serialization-VerIDSerialization/Pods-Serialization-VerIDSerialization.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				3B347227286C491D00969D79 /* Registration.swift */,
 				3B34722B286C64FA00969D79 /* SerializationError.swift */,
 				3B34723B286CDA6600969D79 /* Deserializer.swift */,
+				3B96B4CA2889E65400709F4B /* ImageMetadata.swift */,
 			);
 			path = VerIDSerialization;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 		3B9249192864A0AE00237CF0 /* Protobufs */ = {
 			isa = PBXGroup;
 			children = (
+				3B96B4C82889E4DF00709F4B /* image_metadata.pb.swift */,
 				3B347229286C4B2A00969D79 /* registration.pb.swift */,
 				3B92491A2864A0AE00237CF0 /* system_info.pb.swift */,
 				3B92491B2864A0AE00237CF0 /* recognizable_face.pb.swift */,
@@ -402,9 +408,11 @@
 				3B9249282864A0AE00237CF0 /* rect.pb.swift in Sources */,
 				3B9249262864A0AE00237CF0 /* system_info.pb.swift in Sources */,
 				3B34723C286CDA6600969D79 /* Deserializer.swift in Sources */,
+				3B96B4C92889E4DF00709F4B /* image_metadata.pb.swift in Sources */,
 				3B92492D2864A0AF00237CF0 /* device_info.pb.swift in Sources */,
 				3B9249352864A12F00237CF0 /* Point.swift in Sources */,
 				3B347228286C491D00969D79 /* Registration.swift in Sources */,
+				3B96B4CB2889E65400709F4B /* ImageMetadata.swift in Sources */,
 				3B92492F2864A0AF00237CF0 /* size.pb.swift in Sources */,
 				3B9249292864A0AE00237CF0 /* euler_angle.pb.swift in Sources */,
 				3B92493D2864A1CC00237CF0 /* RecognizableFace.swift in Sources */,
@@ -468,7 +476,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1100000;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -487,7 +495,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -533,7 +541,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1100000;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -546,7 +554,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -563,7 +571,6 @@
 			baseConfigurationReference = 5244BDB003A18982FDE42B76 /* Pods-Serialization-VerIDSerialization.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000000;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -577,7 +584,6 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerialization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -592,7 +598,6 @@
 			baseConfigurationReference = 87540D26701E2ACBFED7E0F6 /* Pods-Serialization-VerIDSerialization.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000000;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -606,7 +611,6 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerialization;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -621,10 +625,8 @@
 			baseConfigurationReference = 1A1CD2841025B34AEAB021F0 /* Pods-Serialization-VerIDSerializationTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerializationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -638,10 +640,8 @@
 			baseConfigurationReference = 41BE9CD55B82537140673A17 /* Pods-Serialization-VerIDSerializationTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3DPTJHF24M;
 				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appliedrec.VerIDSerializationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
